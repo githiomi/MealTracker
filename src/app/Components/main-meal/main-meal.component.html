@@ -1,0 +1,41 @@
+<div class="container-fluid">
+
+   <!-- This is for the meal input form -->
+   <app-meal-input-form (submitNewMeal) = 'acceptededMeal($event)' ></app-meal-input-form>
+   
+   <div class="row">
+    <div class="col-md-8" style="padding: 15px; border-radius: 15px">
+     <div *ngFor = 'let meal of meals; let i = index' class="bg-dark" id="meals" style="padding: 10px;"> 
+       <h5> {{ meal.foodname }} </h5>
+      
+       <button class="btn btn-warning" (click)='toggleMealDetails(i)'>Meal Details</button>
+       
+       <app-meal-details *ngIf = 'meal.showMealDetails' [mealDetails] ='meal' (deleteSelectedMeal) = 'deleteMeal ($event, i)' ></app-meal-details>
+
+     </div>
+    </div>
+
+    <div class="col-md-4; bg-warning" style="padding: 15px; border-radius: 15px; color: black; font-weight: bolder;">
+      <h5 style="color: teal; text-align: center;"> You have logged the following foods: </h5>
+      <ol>
+         <li *ngFor = 'let meal of meals; let i = index'> {{ meal.foodname }} </li>
+      </ol>
+    </div>
+
+  </div>
+
+   <!-- <div id="calories"> -->
+
+    <!-- <div class="buttons"> -->
+     <!-- <button class="btn btn-primary" (click) = 'toggleAllMeals(i)' >All Meals Logged</button> -->
+     <!-- <button class="btn btn-warning" (click) = 'highCalories(i)'>High Calories Foods</button>
+     <button class="btn btn-success" (click) = 'lowCalories(i)'>Low Calories Foods</button>
+    </div> -->
+
+    <!-- </div> -->
+
+  
+
+</div>
+
+

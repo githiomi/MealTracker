@@ -1,0 +1,29 @@
+p{
+   padding: 10px;
+   color: white;
+}
+
+h5{
+   padding: 10px;
+   color: white;
+   border-bottom: 2px solid teal;
+}
+
+#calories{
+   margin: 20px;
+   padding: 5px;
+}
+
+.col-md-8, .com-md-4{
+   margin: 15px;
+}
+
+.buttons{
+   padding-left: 30%;
+}
+
+button{
+   margin: 10px;
+   padding: 5px;
+   width: 130px;
+}

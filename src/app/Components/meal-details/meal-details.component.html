@@ -1,0 +1,28 @@
+<div class="meal-details" style="margin: 5px; color: wheat;">
+
+   <div class="row">
+    <div class="col-md-5" style="margin-right: 100px;">
+      Meal Calories : {{ mealDetails.calories }}
+    <br>
+      Meal Decription : {{ mealDetails.details }}
+    <br>
+    </div>
+
+    <div class="col-md-3">
+      <h4 class="text-center">Edit Meal Info:</h4>
+      <div class="form-group">
+         <label for="mealDetails.calories"> Food Calories: </label>
+         <input style = "border-radius: 10px; padding: 5px;" required type = "number" id = "mealDetails.calories" #mealDetails.calories = "ngModel" [(ngModel)] = "mealDetails.calories" name = "calories" placeholder="Enter food calories...">
+      </div>
+
+      <div class="form-group">
+         <label for="mealDetails.details"> Meal Details: </label>
+         <input style = "border-radius: 10px; padding: 5px;" required type = "text" id = "mealDetails.details" #mealDetails.details = "ngModel" [(ngModel)] = "mealDetails.details" name = "details" placeholder="Enter meal details here...">
+      </div>
+    </div>
+   </div>
+
+   <button class="btn btn-danger" (click) = 'deleteMeal(true)'>Delete</button>
+   <button class="btn btn-primary">Edit</button>
+</div>
+

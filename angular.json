@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "MealTracker": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MealTracker"
+    }
+  },
+  "defaultProject": "MealTracker",
+  "cli": {
+    "analytics": "515792db-1af1-46c0-861e-2e74c3e765d5"
+  }
 }
